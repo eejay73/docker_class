@@ -15,6 +15,8 @@
     - on frontend network
     - 2+ replicas of this container
 
+docker service create --name vote --replicas 2 --network frontend -p 80:80 dockersamples/examplevotingapp_vote:before
+
 - redis
     - redis:3.2
     - key/value storage for incoming votes
