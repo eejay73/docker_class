@@ -24,6 +24,8 @@ docker service create --name vote --replicas 2 --network frontend -p 80:80 docke
     - on frontend network
     - 1 replica NOTE VIDEO SAYS TWO BUT ONLY ONE NEEDED
 
+docker service create --name redis --network frontend redis:3.2
+
 - worker
     - dockersamples/examplevotingapp_worker
     - backend processor of redis and storing results in postgres
